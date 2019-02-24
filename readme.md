@@ -1,4 +1,4 @@
-Dynare サンプルファイル
+Dynare sample files
 ====
 
 ## Description
