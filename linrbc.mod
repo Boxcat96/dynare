@@ -1,54 +1,54 @@
 ////////////////////////////////////////////////////////////////////////////////////
-	//üŒ`RBCƒ‚ƒfƒ‹(ƒJƒŠƒuƒŒ[ƒVƒ‡ƒ“)
-	//Boxcat(“Œ‹‘åŠwŒoÏŠw•”‚S”N) 
-	//2018”N12Œ8“ú
+	//ç·šå½¢RBCãƒ¢ãƒ‡ãƒ«(ã‚«ãƒªãƒ–ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³)
+	//Boxcat
+	//2018å¹´12æœˆ8æ—¥
 	
 	//Please note that the following code is only for "Dynare for MATLAB".
 	//You can use/rewrite this code without my permission.
 	//I will not be responsible for any damage/liability induced by running this code.
 	/////////////////////////////////////////////////////////////////////////////////////
-//RBCƒ‚ƒfƒ‹‚ÌDynareƒR[ƒh
-//ƒp[ƒg‚P@•Ï”‚Ì’è‹`
-var c n y r w k i z;%“à¶•Ï”
-varexo e;%ŠO¶•Ï”
+//RBCãƒ¢ãƒ‡ãƒ«ã®Dynareã‚³ãƒ¼ãƒ‰
+//ãƒ‘ãƒ¼ãƒˆï¼‘ã€€å¤‰æ•°ã®å®šç¾©
+var c n y r w k i z;%å†…ç”Ÿå¤‰æ•°
+varexo e;%å¤–ç”Ÿå¤‰æ•°
 
-//ƒp[ƒg‚Q@ƒpƒ‰ƒ[ƒ^‚Ìİ’è
-parameters alpha beta theta phi delta rho;%ƒpƒ‰ƒ[ƒ^‚ğ’è‹`
-//ƒpƒ‰ƒ[ƒ^[‚É’l‚ğ‘ã“ü
-alpha=0.33;%‘–{•ª”z—¦
-beta=0.996;%Š„ˆø—¦
-theta=1.5;%Á”ï‚Ì‘ã‘Ö’e—Í«‚Ì‹t”
-phi=2;%˜J“­‹Ÿ‹‹‚Ì‘ã‘Ö’e—Í«‚Ì‹t”
-delta=0.04;%‘–{Œ¸–Õ—¦
-rho=0.9;%‹Zpi•à‚Ì‘±«
+//ãƒ‘ãƒ¼ãƒˆï¼’ã€€ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã®è¨­å®š
+parameters alpha beta theta phi delta rho;%ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã‚’å®šç¾©
+//ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ãƒ¼ã«å€¤ã‚’ä»£å…¥
+alpha=0.33;%è³‡æœ¬åˆ†é…ç‡
+beta=0.996;%å‰²å¼•ç‡
+theta=1.5;%æ¶ˆè²»ã®ä»£æ›¿å¼¾åŠ›æ€§ã®é€†æ•°
+phi=2;%åŠ´åƒä¾›çµ¦ã®ä»£æ›¿å¼¾åŠ›æ€§ã®é€†æ•°
+delta=0.04;%è³‡æœ¬æ¸›è€—ç‡
+rho=0.9;%æŠ€è¡“é€²æ­©ã®æŒç¶šæ€§
 
-//ƒp[ƒg3ƒ‚ƒfƒ‹‚Ì‹Lq
+//ãƒ‘ãƒ¼ãƒˆ3ãƒ¢ãƒ‡ãƒ«ã®è¨˜è¿°
 model(linear);
 
-%’èíó‘Ô’l‚Å‹‚ß‚½”’l
+%å®šå¸¸çŠ¶æ…‹å€¤ã§æ±‚ã‚ãŸæ•°å€¤
 #rbar=(1+beta*delta-beta)/theta;%r/(1+r-delta);
 #iybar=(delta*alpha*beta)/(1+beta*delta-beta);
 #cybar=1-iybar;
 
-y=z+alpha*k(-1)+(1-alpha)*n;%¶YŠÖ”
-r=z+(alpha-1)*k(-1)+(1-alpha)*n;%‘–{‚ÌƒŒƒ“ƒ^ƒ‹—¿
-w=z+alpha*k(-1)+alpha*n;%˜J“­ù—v‚ÌÅ“K‰»
-c=c(+1)-rbar*r(+1);%Á”ï‚ÌƒIƒCƒ‰[•û’ö®
-n=(1/phi)*w-(theta/phi)*c;%Å“K˜J“­‹Ÿ‹‹ğŒ
-y=cybar*c+iybar*i;%àsê‚Ì‹ÏtğŒ
-k=(1-delta)*k(-1)+delta*i;%‘–{‚Ì„ˆÚ®
-z=rho*z(-1)+e;%‹ZpƒVƒ‡ƒbƒN
+y=z+alpha*k(-1)+(1-alpha)*n;%ç”Ÿç”£é–¢æ•°
+r=z+(alpha-1)*k(-1)+(1-alpha)*n;%è³‡æœ¬ã®ãƒ¬ãƒ³ã‚¿ãƒ«æ–™
+w=z+alpha*k(-1)+alpha*n;%åŠ´åƒéœ€è¦ã®æœ€é©åŒ–
+c=c(+1)-rbar*r(+1);%æ¶ˆè²»ã®ã‚ªã‚¤ãƒ©ãƒ¼æ–¹ç¨‹å¼
+n=(1/phi)*w-(theta/phi)*c;%æœ€é©åŠ´åƒä¾›çµ¦æ¡ä»¶
+y=cybar*c+iybar*i;%è²¡å¸‚å ´ã®å‡è¡¡æ¡ä»¶
+k=(1-delta)*k(-1)+delta*i;%è³‡æœ¬ã®æ¨ç§»å¼
+z=rho*z(-1)+e;%æŠ€è¡“ã‚·ãƒ§ãƒƒã‚¯
 end;
 
-//ƒp[ƒg4@ƒ‚ƒfƒ‹‚Ìƒ`ƒFƒbƒN
+//ãƒ‘ãƒ¼ãƒˆ4ã€€ãƒ¢ãƒ‡ãƒ«ã®ãƒã‚§ãƒƒã‚¯
 check;
 resid(1);
 steady;
 
-//ƒp[ƒg5@ƒVƒ‡ƒbƒN
+//ãƒ‘ãƒ¼ãƒˆ5ã€€ã‚·ãƒ§ãƒƒã‚¯
 shocks;
 var e = 0.01;
 end;
 
-//ƒp[ƒg6@ƒVƒ~ƒ…ƒŒ[ƒVƒ‡ƒ“(100Šú)
+//ãƒ‘ãƒ¼ãƒˆ6ã€€ã‚·ãƒŸãƒ¥ãƒ¬ãƒ¼ã‚·ãƒ§ãƒ³(100æœŸ)
 stoch_simul(irf=100)y c i n w k r z;
