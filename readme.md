@@ -6,7 +6,7 @@ For more info, please click the link below.
 [Boxcat's website](https://sites.google.com/view/boxcatswebsite/materials?authuser=0)
 
 ## Requirement
-MATLAB(no optional toolbox needed), Dynare (ver 4.2 or upper)
+MATLAB (no optional toolbox needed), Dynare (ver 4.2 or upper)
 
 ## Licence
 Boxcat all rights reserved.  
