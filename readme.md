@@ -1,12 +1,9 @@
 Dynare サンプルファイル
 ====
 
-Overview  
-For more info, please click the link below.
-[tcnksm](https://sites.google.com/view/boxcatswebsite/materials?authuser=0)
-
-
 ## Description
+For more info, please click the link below.  
+[Boxcat's website](https://sites.google.com/view/boxcatswebsite/materials?authuser=0)
 
 ## Requirement
 MATLAB(no optional toolbox needed), Dynare (ver 4.2 or upper)
