@@ -53,16 +53,16 @@ end;
  
 set_param_value('rho',0.5)
 stoch_simul(irf=7,order=1,irf_plot_threshold=0,nograph,noprint) y r c i ; 
-irf_0_trend=oo_.irfs;
+irf_1_trend=oo_.irfs;
 set_param_value('rho',0.7)
 stoch_simul(irf=7,order=1,irf_plot_threshold=0,nograph,noprint) y r c i ; 
 irf_2_trend=oo_.irfs;
 set_param_value('rho',0.8)
 stoch_simul(irf=7,order=1,irf_plot_threshold=0,nograph,noprint) y r c i ; 
-irf_4_trend=oo_.irfs;
+irf_3_trend=oo_.irfs;
 set_param_value('rho',0.9)
 stoch_simul(irf=7,order=1,irf_plot_threshold=0,nograph,noprint) y r c i ; 
-irf_6_trend=oo_.irfs;
+irf_4_trend=oo_.irfs;
 
 figure('Name',' IRF ')
-plot(0:options_.irf,[0 irf_0_trend.y_e],'k-',0:options_.irf,[0 irf_2_trend.y_e],'b--',0:options_.irf,[0 irf_4_trend.y_e],'r-.',0:options_.irf,[0 irf_6_trend.y_e],'*-')
+plot(0:options_.irf,[0 irf_1_trend.y_e],'k-',0:options_.irf,[0 irf_2_trend.y_e],'b--',0:options_.irf,[0 irf_3_trend.y_e],'r-.',0:options_.irf,[0 irf_4_trend.y_e],'*-')
