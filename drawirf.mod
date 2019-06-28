@@ -1,7 +1,7 @@
 s////////////////////////////////////////////////////////////////////////////////////
 	//線形RBCモデル(カリブレーション)
 	//Boxcat 
-	//2018年12月8日
+	//2019年6月28日
 	
 	//Please note that the following code is only for "Dynare for MATLAB".
 	//You can use/rewrite this code without my permission.
